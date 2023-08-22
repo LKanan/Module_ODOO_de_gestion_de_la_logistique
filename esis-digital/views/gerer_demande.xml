@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_esis_digital_demande_form" model="ir.ui.view">
+        <field name="name">esis_digital.demande_form</field>
+        <field name="model">esis_digital.needs</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="object"/>
+                        <field name="imputation"/>
+                        <field name="description"/>
+                        <field name="reference"/>
+                        <field name="quantity"/>
+                        <field name="unit_price"/>
+                        <field name="total_price"/>
+                        <field name="create_uid"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="esis_digital_demande_list" model="ir.ui.view">
+        <field name="name">esis_digital.demande_list</field>
+        <field name="model">esis_digital.needs</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="object"/>
+                <field name="imputation"/>
+                <field name="reference"/>
+                <field name="quantity"/>
+                <field name="unit_price"/>
+                <field name="total_price"/>
+                <field name="create_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_esis_digital_demande" model="ir.actions.act_window">
+        <field name="name">Gestion des etats de besoins</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">esis_digital.effect_dmd</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_esis_digital_demande"
+              name="Demandes"
+              parent="menu_esis_digital_root"
+              action="action_esis_digital_demande"
+    />
+
+</odoo>

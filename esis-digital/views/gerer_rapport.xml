@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="action_esis_digital_rapport" model="ir.actions.act_window">
+        <field name="name">Gestion des rapports</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">esis_digital.rapport</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_esis_digital_rapport_dmd_effect" model="ir.actions.act_window">
+        <field name="name">Gestion des rapports/ Demandes effectuées</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">esis_digital.needs</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_esis_digital_rapport_alloc_effect" model="ir.actions.act_window">
+        <field name="name">Gestion des rapports/ Allocations effectuées</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">esis_digital.allocation_mat</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_esis_digital_rapport"
+              name="Rapports"
+              parent="menu_esis_digital_root"
+    />
+
+    <menuitem id="menu_esis_digital_rapport_dmd_effect"
+              name="Demmandes effectuées"
+              parent="menu_esis_digital_rapport"
+              action="action_esis_digital_rapport_dmd_effect"
+    />
+
+    <menuitem id="menu_esis_digital_rapport_alloc_effect"
+              name="Allocations effectuées"
+              parent="menu_esis_digital_rapport"
+              action="action_esis_digital_rapport_alloc_effect"
+    />
+
+</odoo>

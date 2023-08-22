@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+esis-digital.access_esis_digital_allocation,access_esis_digital_allocation,esis-digital.model_esis_digital_allocation,base.group_user,1,1,1,1
+esis-digital.access_esis_digital_needs,access_esis_digital_needs,esis-digital.model_esis_digital_needs,base.group_user,1,1,1,1
+esis-digital.access_esis_digital_materiel,access_esis_digital_materiel,esis-digital.model_esis_digital_materiel,base.group_user,1,1,1,1
+esis-digital.access_esis_digital_rapport,access_esis_digital_rapport,esis-digital.model_esis_digital_rapport,base.group_user,1,1,1,1
+esis-digital.access_esis_digital_allocation,access_esis_digital_allocation,esis-digital.model_esis_digital_allocation,base.group_user,1,1,1,1
+esis-digital.access_esis_digital_allocation_mat,access_esis_digital_allocation_mat,esis-digital.model_esis_digital_allocation_mat,base.group_user,1,1,1,1
+esis-digital.access_esis_digital_effect_dmd,access_esis_digital_effect_dmd,esis-digital.model_esis_digital_effect_dmd,base.group_user,1,1,1,1
+esis-digital.access_esis_digital_categorie,access_esis_digital_categorie,esis-digital.model_esis_digital_categorie,base.group_user,1,1,1,1
+

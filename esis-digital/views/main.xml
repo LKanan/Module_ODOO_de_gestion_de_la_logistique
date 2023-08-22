@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--    Ceci est le menu principale de notre module et il  porte meme le nom du module dans l'onglet des applications-->
+    <menuitem id="menu_esis_digital_root"
+              name="Logistique_ESIS"/>
+</odoo>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_esis_digital_allocation_main_form" model="ir.ui.view">
+        <field name="name">esis_digital.allocation_main_form</field>
+        <field name="model">esis_digital.allocation</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="given_to"/>
+                        <field name="matricule"/>
+                        <field name="delivery_date"/>
+                        <field name="commentaires"/>
+                        <field name="alloc_mat_ids"/>
+                        <field name="etat_remise"/>
+                        <field name="create_date"/>
+                        <field name="write_date"/>
+                        <field name="create_uid"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="esis_digital_allocation_main_list" model="ir.ui.view">
+        <field name="name">esis_digital.allocation_main_list</field>
+        <field name="model">esis_digital.allocation</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!--                <field name="id"/>-->
+                <field name="given_to"/>
+                <field name="matricule"/>
+                <field name="create_date"/>
+                <field name="delivery_date"/>
+                <field name="create_uid"/>
+                <field name="etat_remise"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="action_esis_digital_mes_tables" model="ir.actions.act_window">
+        <field name="name">Gestion des tables</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">esis_digital.categorie</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_esis_digital_mes_tables"
+              name="Autres"
+              parent="menu_esis_digital_root"
+    />
+
+    <menuitem id="menu_esis_digital_mes_tables_categorie"
+              name="Mes categories"
+              parent="menu_esis_digital_mes_tables"
+              action="action_esis_digital_mes_tables"
+    />
+
+</odoo>

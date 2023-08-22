@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="email_effect_dmd" model="mail.template">
+            <field name="name">Template effect_dmd</field>
+            <field name="model_id" ref="esis-digital.model_esis_digital_effect_dmd"/>
+            <field name="email_to">${ctx['email_to']|safe}</field>
+            <field name="subject">${object.nom_SGAD} Demande de ravitaillement materiels en stock</field>
+            <field name="body_html"><![CDATA[
+                         <p>
+                            <strong>Bonjour Mr. ${object.nom_SGAD} </strong>
+                         </p>
+                         <p>
+                            Nous avons constaté une diminution ou carence en materiels selon la liste dans le document<br>
+                            vous donné en pièce jointe ci dessous.<br>
+                            Toutes les propositions de modification eventuelles de ce document sont les bienvenues.<br>
+                            Esperant un retour d'approbation de votre part ou de proposition de modification Merci.<br>
+                        </p>
+                        <p>La logistique<br>Mr.Jonas</p>
+                    ]]>
+            </field>
+        </record>
+    </data>
+</odoo>
