@@ -18,8 +18,8 @@
         <field name="name">esis_digital.categorie_list</field>
         <field name="model">esis_digital.categorie</field>
         <field name="arch" type="xml">
-            <tree class="text-center">
-                <field name="name" class="text-center"/>
+            <tree>
+                <field name="name"/>
             </tree>
         </field>
     </record>
