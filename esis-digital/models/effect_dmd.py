@@ -6,9 +6,10 @@ from odoo import models, fields, api
 class Esis_digitalEffect_dmd(models.Model):
     _name = 'esis_digital.effect_dmd'
     _description = 'Gestion des demandes effectuées'
-    _inherit = 'mail.thread'
-    nom_SGAD = "Patient"
-    email = "elkanan10@gmail.com"
+    _rec_name = 'state_request'
+    # _inherit = 'mail.thread'
+    # nom_SGAD = "Patient"
+    # email = "elkanan10@gmail.com"
 
     create_uid = fields.Many2one('res.users', string='Demande faite par', readonly=True)
     # date_0f_Request
@@ -24,12 +25,6 @@ class Esis_digitalEffect_dmd(models.Model):
                                string='Liste des besoins')
     montant_total = fields.Integer(string='Cout total', default=0)
 
-    def name_get(self):
-        result = []
-        for person in self:
-            name = '[ ' + person.state_request + '] '
-            result.append([person.id, name])
-        return result
     # @api.onchange('need_ids')
     # def reunitialisation(self):
     #     if self.need_ids:
