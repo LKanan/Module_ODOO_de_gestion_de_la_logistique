@@ -6,6 +6,7 @@ from odoo import models, fields, api
 class Esis_digitalNeeds(models.Model):
     _name = 'esis_digital.needs'
     _description = 'Gestion des etats de besoins'
+    _rec_name = 'object'
 
     object = fields.Char(string='Objet')
     imputation = fields.Char()
@@ -19,12 +20,6 @@ class Esis_digitalNeeds(models.Model):
     effect_dmd_id = fields.Many2one(comodel_name='esis_digital.effect_dmd')
     create_date = fields.Datetime(string="Date de la demande", readonly=True)
 
-    def name_get(self):
-        nom_page = []
-        for materiel in self:
-            name = '[ ' + materiel.object + '] '
-            nom_page.append([materiel.id, name])
-        return nom_page
 
     """ Avec cette methode je peux faire des operations sur les valeurs des champs et là on vient de définir une opération
     de multiplication de la quantité par le prix unitaire pour trouver le prix total"""
