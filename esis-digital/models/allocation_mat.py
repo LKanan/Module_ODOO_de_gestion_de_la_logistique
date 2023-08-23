@@ -9,7 +9,7 @@ class Esis_digitalAllocation(models.Model):
     _description = 'Gestion des allocations materiel'
 
     materiel_id = fields.Many2one(comodel_name='esis_digital.materiel', string='Description')
-    categorie_id = fields.Many2one(comodel_name='esis_digital.categorie')
+    categorie_id = fields.Many2one(comodel_name='esis_digital.categorie', required=True)
     quantity = fields.Integer(string='Quantité')
     motif = fields.Char()
     attachment = fields.Char(string="Pièce jointe ")
