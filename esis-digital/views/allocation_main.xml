@@ -26,14 +26,14 @@
         <field name="name">esis_digital.allocation_main_list</field>
         <field name="model">esis_digital.allocation</field>
         <field name="arch" type="xml">
-            <tree>
+            <tree class="text-center">
                 <!--                <field name="id"/>-->
-                <field name="given_to"/>
-                <field name="matricule"/>
-                <field name="create_date"/>
-                <field name="delivery_date"/>
-                <field name="create_uid"/>
-                <field name="etat_remise"/>
+                <field name="given_to" class="text-center"/>
+                <field name="matricule" class="text-center"/>
+                <field name="create_date" class="text-center"/>
+                <field name="delivery_date" class="text-center"/>
+                <field name="create_uid" class="text-center"/>
+                <field name="etat_remise" class="text-center"/>
             </tree>
         </field>
     </record>
