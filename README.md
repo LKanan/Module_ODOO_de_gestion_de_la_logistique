@@ -3,14 +3,14 @@ Ce module permet de gérer efficacement les entrées et les sorties des matérie
 
 **PRESENTATION DES DIFFERENTS MENU ET SOUS-MENUS**
 - **Logistique_ESIS (menu principal)** <br>
-  - Materiels
+  - **Materiels**
     - Allouer materiel
     - Enregistrer materiel
-  - Demandes
-  - Rapports
+  - **Demandes**
+  - **Rapports**
       - Demandes effectuées
       - Allocations effectuées
-  - Autres
+  - **Autres**
     - Mes categories<br>
 <br>**EXPLICATION DES DIFFERENTS MENUS ET SOUS-MENUS** <br>
 - **Materiels** <br>
