@@ -7,6 +7,7 @@ from odoo.exceptions import ValidationError
 class Esis_digitalAllocation(models.Model):
     _name = 'esis_digital.allocation_mat'
     _description = 'Gestion des allocations materiel'
+    _rec_name = 'materiel_id'
 
     materiel_id = fields.Many2one(comodel_name='esis_digital.materiel', string='Description')
     categorie_id = fields.Many2one(comodel_name='esis_digital.categorie', required=True)
