@@ -25,7 +25,7 @@
             <tree class="text-center">
                 <field name="materiel_id"  class="text-center"/>
                 <field name="categorie_id" class="text-center"/>
-                <field name="quantity" class="text-center"/>
+                <field name="quantity"/>
                 <field name="motif" class="text-center"/>
                 <field name="attachment" class="text-center"/>
                 <field name="create_date" class="text-center"/>
