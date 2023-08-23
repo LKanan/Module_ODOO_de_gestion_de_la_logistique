@@ -6,6 +6,7 @@ from odoo import models, fields, api
 class Esis_digitalAllocation(models.Model):
     _name = 'esis_digital.allocation'
     _description = 'Gestion des informations sur celui qui alloue'
+    _rec_name = 'etat_remise'
 
     # Materiel donné à:
     given_to = fields.Char(string="Demandeur (nom & Post_nom)", required=True)
@@ -29,9 +30,3 @@ class Esis_digitalAllocation(models.Model):
 
     # id = fields.Integer(string="ID", readonly=True)
 
-    def name_get(self):
-        result = []
-        for person in self:
-            name = '[ ' + person.etat_remise + '] '
-            result.append([person.id, name])
-        return result
