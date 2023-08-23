@@ -24,13 +24,13 @@
         <field name="name">esis_digital.materiel_list</field>
         <field name="model">esis_digital.materiel</field>
         <field name="arch" type="xml">
-            <tree>
-                <field name="name"/>
-                <field name="categorie_id"/>
-                <field name="num_serie"/>
-                <field name="quantity"/>
-                <field name="create_date"/>
-                <field name="create_uid"/>
+            <tree class="text-center">
+                <field name="name" class="text-center"/>
+                <field name="categorie_id" class="text-center"/>
+                <field name="num_serie" class="text-center"/>
+                <field name="quantity" class="text-center"/>
+                <field name="create_date" class="text-center"/>
+                <field name="create_uid" class="text-center"/>
             </tree>
         </field>
     </record>
