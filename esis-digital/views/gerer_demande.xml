@@ -25,14 +25,14 @@
         <field name="name">esis_digital.demande_list</field>
         <field name="model">esis_digital.needs</field>
         <field name="arch" type="xml">
-            <tree>
-                <field name="object"/>
-                <field name="imputation"/>
-                <field name="reference"/>
-                <field name="quantity"/>
-                <field name="unit_price"/>
-                <field name="total_price"/>
-                <field name="create_date"/>
+            <tree class="text-center">
+                <field name="object" class="text-center"/>
+                <field name="imputation" class="text-center"/>
+                <field name="reference" class="text-center"/>
+                <field name="quantity" class="text-center"/>
+                <field name="unit_price" class="text-center"/>
+                <field name="total_price" class="text-center"/>
+                <field name="create_date" class="text-center"/>
             </tree>
         </field>
     </record>
