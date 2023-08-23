@@ -8,4 +8,6 @@ class Esis_digitalCategorie(models.Model):
     _description = 'Gestion des categories'
 
     name = fields.Char(string='Liste des categories')
-    materiel_id = fields.Many2one('esis_digital.materiel')
+    materiel_ids = fields.One2many(comodel_name='esis_digital.materiel',
+                                   inverse_name='categorie_id',
+                                   string='materiels de la categorie')
