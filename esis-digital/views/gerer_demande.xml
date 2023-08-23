@@ -29,7 +29,7 @@
                 <field name="object" class="text-center"/>
                 <field name="imputation" class="text-center"/>
                 <field name="reference" class="text-center"/>
-                <field name="quantity" class="text-center"/>
+                <field name="quantity"/>
                 <field name="unit_price" class="text-center"/>
                 <field name="total_price" class="text-center"/>
                 <field name="create_date" class="text-center"/>
