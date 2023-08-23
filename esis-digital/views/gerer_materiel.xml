@@ -28,7 +28,7 @@
                 <field name="name" class="text-center"/>
                 <field name="categorie_id" class="text-center"/>
                 <field name="num_serie" class="text-center"/>
-                <field name="quantity" class="text-center"/>
+                <field name="quantity"/>
                 <field name="create_date" class="text-center"/>
                 <field name="create_uid" class="text-center"/>
             </tree>
