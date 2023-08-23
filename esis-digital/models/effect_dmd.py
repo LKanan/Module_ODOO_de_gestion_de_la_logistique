@@ -15,8 +15,8 @@ class Esis_digitalEffect_dmd(models.Model):
     # date_0f_Request
     create_date = fields.Datetime(string="Date de la demande", readonly=True)
     state_request = fields.Selection([
-        ('Déja approuvée', 'Approuvé'),
-        ('Pas encore approuvée', 'Non approuvé'),
+        ('Déja approuvée', 'Déja approuvée'),
+        ('Pas encore approuvée', 'Pas encore approuvée'),
     ],
         string="Approbation",
         default='Pas encore approuvée')
