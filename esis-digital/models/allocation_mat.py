@@ -27,7 +27,7 @@ class Esis_digitalAllocation(models.Model):
      un oeil, si ces chaamps passés en parametre du decorateur on change varie alors on va executer la foction qui vient 
      juste apres le decorateur.
      Ex:@api.onchange('quantity', 'categorie_id')
-     
+
      Mais on constate aussi que pour que maintenant la fonction qui doit s'executer reconnaisse ou qu'il soit aussi 
       sensible aux variations des champs placés en paramettre du decorateur onchange il faut le specifier dans la condition
       de test de variation qui se trouve à l'interieur, sinon il ne fera rien en cas e changement de valeur d'un champ 
@@ -46,16 +46,15 @@ class Esis_digitalAllocation(models.Model):
             for materiel in materiel_list:
                 ancienne_valeur = materiel.quantity
 
-                if materiel.quantity == 0:
-                    raise ValidationError(f"""Désolé! La quantité en stock est vide.""")
+                if (materiel.name == self.materiel_id.name) and (materiel.categorie_id == self.categorie_id):
+                    ancienne_valeur = materiel.quantity
+                    if materiel.quantity == 0:
+                        raise ValidationError(f"""Désolé! La quantité en stock est vide.""")
 
-                elif materiel.quantity < self.quantity:
-                    raise ValidationError(f"""Désolé!
+                    elif materiel.quantity < self.quantity:
+                        raise ValidationError(f"""Désolé!
 La quantité spécifiée est supérieure à la quantité en stoc.
 Quantité en stock = {ancienne_valeur} materiel(s), quantité spécifiée = {self.quantity} materiels.""")
 
-                elif (materiel.name == self.materiel_id.name) and (materiel.categorie_id == self.categorie_id):
-                    # ancienne_valeur = materiel.quantity
-                    if materiel.quantity >= self.quantity:
+                    elif materiel.quantity >= self.quantity:
                         materiel.quantity = materiel.quantity - self.quantity
-                        return {'warning': {'title': 'Succes', 'message': 'Allocation effectuée'}}
